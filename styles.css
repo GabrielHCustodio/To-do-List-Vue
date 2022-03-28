@@ -1,0 +1,49 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container {
+    width: 100vw;
+    height: 100vh;
+    background: #ccc;
+}
+
+.container .header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 30px;
+}
+
+.container .header h1 {
+    font-size: 2.6rem;
+}
+
+/*  Inputs  */
+.inputs {
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 30px;
+}
+
+.inputs input[type=text] {
+    width: 250px;
+    height: 30px;
+    margin-right: 20px;
+    padding-left: 10px;
+    outline: none;
+}
+
+.inputs input[type=submit] {
+    width: 80px;
+    height: 30px;
+    border-radius: 20px;
+    border: none;
+    background: green;
+    color: white;
+    cursor: pointer;
+}
