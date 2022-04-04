@@ -17,8 +17,13 @@
             </div>
             
             <div class="inputs">
-                <input type="text" :placeholder="placeholder">
+                <input type="text" :placeholder="placeholder" id="inputActivity">
                 <input type="submit" :value="valor" @click="addActivity()">
+            </div>
+
+            <div v-for="a in atividades" class="activities" >
+                <h4>{{ a.atividade }}</h4>
+                <img src="https://img.icons8.com/material-sharp/24/000000/full-trash.png"/>
             </div>
         </div>
     </div>

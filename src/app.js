@@ -1,16 +1,19 @@
 const nameApp = {
     data() {
         return {
+            atividades: [],
             título: "To Do List",
             placeholder: "Informe a atividade",
             valor: "Adicionar",
-            nomeAtividade: ""
+            name_activity: ""
         }
     },
     methods: {
         addActivity() {
-            alert('Atividade adicionada')
-        }
+            this.atividades.push({
+                atividade: inputActivity.value
+            })
+        },
     }
 }
 

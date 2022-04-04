@@ -47,3 +47,15 @@
     color: white;
     cursor: pointer;
 }
+
+.activities {
+    margin-top: 20px;
+    font-size: 22px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.activities img {
+    margin-left: 15px;
+}
