@@ -14,6 +14,12 @@ const nameApp = {
                 atividade: inputActivity.value
             })
         },
+        clearActivity() {
+            const newAtividades = document.querySelectorAll('.activities')
+            for(var i = 0 ; i < newAtividades.length; i++) {
+                newAtividades[i].remove()
+            }
+        }
     }
 }
 
