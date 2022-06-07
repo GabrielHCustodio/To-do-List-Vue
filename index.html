@@ -12,25 +12,24 @@
 <body>
     <div id="app">
         <div class="container">
-            <div class="header">
-                <h1>{{ título }}</h1>
-            </div>
-            
-            <div class="inputs">
-                <input type="text" :placeholder="placeholder" id="inputActivity">
-                <input type="submit" :value="valor" @click="addActivity">
-            </div>
-
-            <div v-for="a in atividades" class="activities">
-                <h4>{{ a.atividade }}</h4>
-                <img src="https://img.icons8.com/material-sharp/24/000000/full-trash.png"/>
-            </div>
-
-            <div id="clear">
-                <button @click="clearActivity"
-                        v-if="atividades.length > 0">
-                    Limpar
-                </button>
+            <div class="container-app">
+                <div class="container-header">
+                    <p id="title">To Do List</p>
+                </div>
+                <hr>
+                <div class="container-content">
+                    <div class="container-box">
+                        <input type="checkbox" name="" id="">
+                        <p>{{activity}}</p>
+                        <span @click="dltActivity">$$</span>
+                    </div>
+                </div>
+                <hr>
+                <div class="container-footer">
+                    <div class="container-add" @click="addActivity">
+                        <p> + </p>
+                    </div>
+                </div>
             </div>
         </div>
     </div>

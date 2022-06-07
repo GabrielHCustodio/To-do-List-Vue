@@ -7,75 +7,83 @@
 .container {
     width: 100vw;
     height: 100vh;
-    background: #ccc;
-}
-
-.container .header {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 30px;
-}
-
-.container .header h1 {
-    font-size: 2.6rem;
-}
-
-/*  Inputs  */
-.inputs {
-    width: 100vw;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-top: 30px;
-}
-
-.inputs input[type=text] {
-    width: 250px;
-    height: 30px;
-    margin-right: 20px;
-    padding-left: 10px;
-    outline: none;
-}
-
-.inputs input[type=submit] {
-    width: 80px;
-    height: 30px;
-    border-radius: 20px;
-    border: none;
-    background: green;
-    color: white;
-    cursor: pointer;
-}
-
-.activities {
-    margin-top: 20px;
-    font-size: 22px;
+    background: #6c6cf5;
     display: flex;
     align-items: center;
     justify-content: center;
 }
 
-.activities img {
-    margin-left: 15px;
-    cursor: pointer;
+.container-app {
+    width: 341px;
+    height: 570px;
+    background: #ffffff;
+    border-radius: 23px;
 }
 
-#clear {
-    width: 100%;
+.container-header {
+    height: 50px;
     display: flex;
     align-items: center;
-    justify-content: center;
-    margin-top: 30px;
+    justify-content: left;
+    margin-left: 20px;
 }
 
-#clear button {
-    width: 80px;
-    height: 30px;
-    color: black;
-    background-color: red;
-    border: none;
+.container-header #title {
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+.container-content {
+    height: 460px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    flex-direction: column;
+
+}
+
+.container-content .container-box {
+    width: 320px;
+    height: 44px;
+    border: 1px solid #545454;
     border-radius: 5px;
-    font-size: 1rem;
+    margin-top: 10px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.container-content .container-box input[type=checkbox] {
+    width: 15px;
+    height: 15px;
+}
+
+.container-content .container-box p {
+    font-size: 1.3rem;
+    font-style: italic;
+}
+
+.container-footer {
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.container-footer .container-add {
+    width: 35px;
+    height: 35px;
+    margin-right: 10px;
+    border-radius: 50%;
+    background: #6c6cf5;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     cursor: pointer;
+}
+
+.container-footer .container-add p {
+    font-size: 2rem;
+    font-weight: bolder;
+    color: #ffffff;
 }

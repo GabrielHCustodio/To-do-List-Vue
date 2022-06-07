@@ -1,24 +1,16 @@
 const nameApp = {
     data() {
         return {
-            atividades: [],
-            título: "To Do List",
-            placeholder: "Informe a atividade",
-            valor: "Adicionar",
-            name_activity: ""
+            activity: ''
         }
     },
     methods: {
         addActivity() {
-            this.atividades.push({
-                atividade: inputActivity.value
-            })
+            let name = prompt('Informe o nome da atividade...')
+            this.activity = name
         },
-        clearActivity() {
-            const newAtividades = document.querySelectorAll('.activities')
-            for(var i = 0 ; i < newAtividades.length; i++) {
-                newAtividades[i].remove()
-            }
+        dltActivity() {
+            console.log('HAHAHA')
         }
     }
 }
