@@ -53,13 +53,37 @@
     align-items: center;
 }
 
-.container-content .container-box input[type=checkbox] {
-    width: 15px;
-    height: 15px;
+.container-content .container-box .input,
+.container-content .container-box .nameAc,
+.container-content .container-box .delete {
+    display: flex;
+    align-items: center;
 }
 
-.container-content .container-box p {
-    font-size: 1.3rem;
+.container-content .container-box .input,
+.container-content .container-box .delete {
+    width: 40px;
+}
+
+.container-content .container-box .input input[type=checkbox] {
+    width: 15px;
+    height: 15px;
+    margin-left: 10px;
+}
+
+.container-content .container-box .nameAct {
+    max-width: 240px;
+    width: 100%;
+}
+
+.container-content .container-box .nameAct #checked {
+    font-size: 1.4rem;
+    font-style: italic;
+    text-decoration: line-through;
+}
+
+.container-content .container-box .nameAct #notchecked {
+    font-size: 1.4rem;
     font-style: italic;
 }
 

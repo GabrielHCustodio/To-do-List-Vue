@@ -1,15 +1,16 @@
 const nameApp = {
     data() {
         return {
-            activity: ''
+            activity: [],
+            checked: false
         }
     },
     methods: {
-        addActivity() {
+        addAct() {
             let name = prompt('Informe o nome da atividade...')
-            this.activity = name
+            this.activity.push(name)
         },
-        dltActivity() {
+        dltAct() {
             console.log('HAHAHA')
         }
     }
