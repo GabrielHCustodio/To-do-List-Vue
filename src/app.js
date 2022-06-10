@@ -8,10 +8,10 @@ const nameApp = {
     methods: {
         addAct() {
             let name = prompt('Informe o nome da atividade...')
-            this.activity.push(name)
+            this.activity.push({ name : name , id : id})
         },
-        dltAct() {
-            console.log('HAHAHA')
+        dltAct(id) {
+            console.log(id)
         }
     }
 }

@@ -21,10 +21,10 @@
                     <div class="container-box" v-for="a in activity">
                         <div class="input"><input type="checkbox" id="check" v-model="checked"></div>
                         <div class="nameAct">
-                            <p id="checked" v-if="checked">{{a}}</p>
-                            <p id="notchecked" v-if="!checked">{{a}}</p>
+                            <p id="checked" v-if="checked">{{a.name}}</p>
+                            <p id="notchecked" v-if="!checked">{{a.name}}</p>
                         </div>
-                        <div class="delete"><img src="./image/delete.svg" alt="" @click="dltAct"></div>
+                        <div class="delete"><img src="./image/delete.svg" alt="" @click="dltAct(a.id)"></div>
                     </div>
                 </div>
                 <hr>

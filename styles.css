@@ -1,113 +1,127 @@
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 .container {
-    width: 100vw;
-    height: 100vh;
-    background: #6c6cf5;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+  width: 100vw;
+  height: 100vh;
+  background: #6c6cf5;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .container-app {
-    width: 341px;
-    height: 570px;
-    background: #ffffff;
-    border-radius: 23px;
+  width: 341px;
+  height: 570px;
+  background: #ffffff;
+  border-radius: 23px;
 }
 
 .container-header {
-    height: 50px;
-    display: flex;
-    align-items: center;
-    justify-content: left;
-    margin-left: 20px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: left;
+  margin-left: 20px;
 }
 
 .container-header #title {
-    font-size: 2rem;
-    font-weight: bold;
+  font-size: 2rem;
+  font-weight: bold;
 }
 
 .container-content {
-    height: 460px;
-    display: flex;
-    align-items: center;
-    justify-content: flex-start;
-    flex-direction: column;
+  height: 460px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  flex-direction: column;
+  overflow: auto;
+}
 
+.container-content::-webkit-scrollbar {
+  display: none;
 }
 
 .container-content .container-box {
-    width: 320px;
-    height: 44px;
-    border: 1px solid #545454;
-    border-radius: 5px;
-    margin-top: 10px;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
+  width: 320px;
+  height: 44px;
+  border: 1px solid #545454;
+  border-radius: 5px;
+  margin-top: 10px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
 }
 
 .container-content .container-box .input,
 .container-content .container-box .nameAc,
 .container-content .container-box .delete {
-    display: flex;
-    align-items: center;
+  display: flex;
+  align-items: center;
 }
 
 .container-content .container-box .input,
 .container-content .container-box .delete {
-    width: 40px;
+  width: 40px;
 }
 
-.container-content .container-box .input input[type=checkbox] {
-    width: 15px;
-    height: 15px;
-    margin-left: 10px;
+.container-content .container-box .input input[type="checkbox"] {
+  width: 15px;
+  height: 15px;
+  margin-left: 10px;
 }
 
 .container-content .container-box .nameAct {
-    max-width: 240px;
-    width: 100%;
+  width: 240px;
+  overflow: auto;
+}
+
+.container-content .container-box .nameAct::-webkit-scrollbar {
+  width: 6px;
+  height: 3px;
+}
+
+.container-content .container-box .nameAct::-webkit-scrollbar-thumb {
+  background-color: black;
+  border-radius: 20px;
 }
 
 .container-content .container-box .nameAct #checked {
-    font-size: 1.4rem;
-    font-style: italic;
-    text-decoration: line-through;
+  font-size: 1.4rem;
+  font-style: italic;
+  text-decoration: line-through;
 }
 
 .container-content .container-box .nameAct #notchecked {
-    font-size: 1.4rem;
-    font-style: italic;
+  font-size: 1.4rem;
+  font-style: italic;
 }
 
 .container-footer {
-    height: 60px;
-    display: flex;
-    align-items: center;
-    justify-content: flex-end;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
 }
 
 .container-footer .container-add {
-    width: 35px;
-    height: 35px;
-    margin-right: 10px;
-    border-radius: 50%;
-    background: #6c6cf5;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    cursor: pointer;
+  width: 35px;
+  height: 35px;
+  margin-right: 10px;
+  border-radius: 50%;
+  background: #6c6cf5;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
 }
 
 .container-footer .container-add p {
-    font-size: 2rem;
-    font-weight: bolder;
-    color: #ffffff;
+  font-size: 2rem;
+  font-weight: bolder;
+  color: #ffffff;
 }
