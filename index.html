@@ -19,10 +19,9 @@
                 <hr>
                 <div class="container-content">
                     <div class="container-box" v-for="a in activity">
-                        <div class="input"><input type="checkbox" id="check" v-model="checked"></div>
+                        <div class="input"><input type="checkbox" id="check" @change="check($event, a.id)"></div>
                         <div class="nameAct">
-                            <p id="checked" v-if="checked">{{a.name}}</p>
-                            <p id="notchecked" v-if="!checked">{{a.name}}</p>
+                            <p id="paragraph" class="notchecked">{{a.name}}</p>
                         </div>
                         <div class="delete"><img src="./image/delete.svg" alt="" @click="dltAct(a.id)"></div>
                     </div>

@@ -1,21 +1,18 @@
 const nameApp = {
     data() {
         return {
-            activity: [],
-            checked: false
+            activity: []
         }
     },
-    mounted() {
-        this.activity = JSON.parse(localStorage.getItem('act'))
-
-        if (!this.activity) this.activity = []
-    },
-    updated() {
+    created() {
         this.activity = JSON.parse(localStorage.getItem('act'))
     },
     methods: {
         addAct() {
             let activities = this.activity
+
+            if (!activities) activities = []
+
             activities.push({
                 name: prompt('Informe o nome da atividade...'),
                 id: Math.random()
@@ -34,7 +31,19 @@ const nameApp = {
 
             let newAct =  removeId(index, "id" , id)
 
-            this.activity = localStorage.setItem('act', JSON.stringify(newAct))
+            localStorage.setItem('act', JSON.stringify(newAct))
+
+            this.activity = JSON.parse(localStorage.getItem('act'))
+        },
+        check(e, id) {
+            let checked = e.target.checked
+            console.log(id)
+
+            if(checked === true) {
+                document.querySelector('#paragraph').classList.toggle("checked")
+            }else {
+                document.querySelector('#paragraph').classList.toggle("notchecked")
+            }
         }
     }
 }
