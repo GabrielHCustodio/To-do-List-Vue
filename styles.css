@@ -48,36 +48,37 @@
 
 .container-content .container-box {
   width: 320px;
-  height: 44px;
+  min-height: 44px;
+  max-height: 44px;
+  height: 100%;
   border: 1px solid #545454;
   border-radius: 5px;
   margin-top: 10px;
   display: flex;
   flex-direction: row;
   align-items: center;
+  justify-content: space-between;
 }
 
-.container-content .container-box .input,
 .container-content .container-box .nameAc,
 .container-content .container-box .delete {
   display: flex;
   align-items: center;
 }
 
-.container-content .container-box .input,
 .container-content .container-box .delete {
   width: 40px;
 }
 
-.container-content .container-box .input input[type="checkbox"] {
-  width: 15px;
-  height: 15px;
-  margin-left: 10px;
-}
 
 .container-content .container-box .nameAct {
-  width: 240px;
-  overflow: auto;
+  width: 280px;
+  padding-left: 10px;
+}
+
+.container-content .container-box .nameAct #paragraph {
+  font-size: 1.2rem;
+  font-style: italic;
 }
 
 .container-content .container-box .nameAct::-webkit-scrollbar {
@@ -88,17 +89,6 @@
 .container-content .container-box .nameAct::-webkit-scrollbar-thumb {
   background-color: black;
   border-radius: 20px;
-}
-
-#paragraph.checked {
-  text-decoration: line-through;
-  font-size: 1.4rem;
-  font-style: italic;
-}
-
-#paragraph.notchecked {
-  font-size: 1.4rem;
-  font-style: italic;
 }
 
 .container-footer {

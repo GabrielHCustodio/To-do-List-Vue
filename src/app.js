@@ -34,16 +34,6 @@ const nameApp = {
             localStorage.setItem('act', JSON.stringify(newAct))
 
             this.activity = JSON.parse(localStorage.getItem('act'))
-        },
-        check(e, id) {
-            let checked = e.target.checked
-            console.log(id)
-
-            if(checked === true) {
-                document.querySelector('#paragraph').classList.toggle("checked")
-            }else {
-                document.querySelector('#paragraph').classList.toggle("notchecked")
-            }
         }
     }
 }

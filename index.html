@@ -19,9 +19,8 @@
                 <hr>
                 <div class="container-content">
                     <div class="container-box" v-for="a in activity">
-                        <div class="input"><input type="checkbox" id="check" @change="check($event, a.id)"></div>
                         <div class="nameAct">
-                            <p id="paragraph" class="notchecked">{{a.name}}</p>
+                            <p id="paragraph">{{a.name}}</p>
                         </div>
                         <div class="delete"><img src="./image/delete.svg" alt="" @click="dltAct(a.id)"></div>
                     </div>
