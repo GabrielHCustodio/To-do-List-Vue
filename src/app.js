@@ -1,7 +1,8 @@
 const nameApp = {
     data() {
         return {
-            activity: []
+            activity: [],
+            form: true
         }
     },
     created() {
@@ -9,17 +10,47 @@ const nameApp = {
     },
     methods: {
         addAct() {
+            const modal = document.querySelector("#modal");
+            const fade = document.querySelector("#fade");
+
+            function toggleModal()  {
+                [modal, fade].forEach((el) => {el.classList.toggle("hide")})
+            }
+
+            toggleModal()
+        },
+        saveAct() {
+            const modal = document.querySelector("#modal");
+            const fade = document.querySelector("#fade");
+
+            function toggleModal()  {
+                [modal, fade].forEach((el) => {el.classList.toggle("hide")})
+            }
+
+            let act = document.querySelector('#act').value
+
             let activities = this.activity
-
             if (!activities) activities = []
-
             activities.push({
-                name: prompt('Informe o nome da atividade...'),
+                name: act,
                 id: Math.random()
             })
 
             localStorage.setItem('act', JSON.stringify(activities))
 
+            toggleModal()
+
+            document.querySelector('#act').value = ''
+        },
+        cancel() {
+            const modal = document.querySelector("#modal");
+            const fade = document.querySelector("#fade");
+
+            function toggleModal()  {
+                [modal, fade].forEach((el) => {el.classList.toggle("hide")})
+            }
+
+            toggleModal()
         },
         dltAct(id) {
             let index = this.activity

@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -9,6 +10,7 @@
     <script src="./src/app.js" defer></script>
     <title>First project</title>
 </head>
+
 <body>
     <div id="app">
         <div class="container">
@@ -33,7 +35,21 @@
                 </div>
             </div>
         </div>
+
+        <div id="fade" class="hide"></div>
+        <div id="modal" class="hide">
+            <div class="header-modal">
+                <h2>Este é o Modal</h2>
+                <button id="save" @click="saveAct">Salvar</button>
+                <button id="cancel" @click="cancel">Cancelar</button>
+            </div>
+            <div class="body-modal">
+                <label for="Act">Nome da Atividade...</label>
+                <input type="text" name="act" id="act">
+            </div>
+        </div>
     </div>
 
 </body>
+
 </html>
