@@ -5,8 +5,9 @@
 }
 
 .container {
-  width: 100vw;
-  height: 100vh;
+  width: 100%;
+  height: 100%;
+  padding: 20px 0;
   background: #6c6cf5;
   display: flex;
   align-items: center;
@@ -15,7 +16,8 @@
 
 .container-app {
   width: 341px;
-  height: 570px;
+  height: 100%;
+  max-height: 560px;
   background: #ffffff;
   border-radius: 23px;
 }
@@ -95,7 +97,7 @@
 }
 
 .container-footer {
-  height: 60px;
+  height: 45px;
   display: flex;
   align-items: center;
   justify-content: flex-end;
@@ -160,9 +162,17 @@
 
 .header-modal h2 {
   font-size: 2rem;
+  width: 60%;
 }
 
-.header-modal button {
+.header-modal .button {
+  width: 40%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.header-modal .button button {
   width: 70px;
   height: 30px;
   font-size: .9rem;
@@ -171,8 +181,8 @@
   transition: .5s;
 }
 
-.header-modal #save {
-  margin-left: 100px;
+.header-modal .button #save {
+  margin-right: 2%;
 }
 
 .header-modal #save:hover {
