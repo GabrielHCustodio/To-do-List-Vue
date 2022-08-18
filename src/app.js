@@ -10,14 +10,7 @@ const nameApp = {
     },
     methods: {
         addAct() {
-            const modal = document.querySelector("#modal");
-            const fade = document.querySelector("#fade");
-
-            function toggleModal()  {
-                [modal, fade].forEach((el) => {el.classList.toggle("hide")})
-            }
-
-            toggleModal()
+            this.modal()
         },
         saveAct() {
             const modal = document.querySelector("#modal");
@@ -43,14 +36,9 @@ const nameApp = {
             document.querySelector('#act').value = ''
         },
         cancel() {
-            const modal = document.querySelector("#modal");
-            const fade = document.querySelector("#fade");
+            this.modal()
 
-            function toggleModal()  {
-                [modal, fade].forEach((el) => {el.classList.toggle("hide")})
-            }
-
-            toggleModal()
+            document.querySelector('#act').value = ''
         },
         dltAct(id) {
             let index = this.activity
@@ -65,6 +53,16 @@ const nameApp = {
             localStorage.setItem('act', JSON.stringify(newAct))
 
             this.activity = JSON.parse(localStorage.getItem('act'))
+        },
+        modal() {
+            const modal = document.querySelector("#modal");
+            const fade = document.querySelector("#fade");
+
+            function toggleModal()  {
+                [modal, fade].forEach((el) => {el.classList.toggle("hide")})
+            }
+
+            toggleModal()
         }
     }
 }
